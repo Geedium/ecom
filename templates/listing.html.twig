@@ -3,6 +3,7 @@
 {% import "macros.html.twig" as macros %}
 
 {% block content %}
+	<h1>{{ category.title }}</h1>
 	{% if products|length > 0 %}
 		<div class="row row-cols-2 row-cols-lg-2 g-2 g-lg-3">
 			{% for product in products %}

@@ -1,0 +1,41 @@
+{% macro product(product) %}
+	<div class="col">
+		<div class="card shadow-sm rounded-0">
+			<div class="card-header bg-transparent">
+				{{ product.title|e }}
+			</div>
+			<div class="card-body">
+				<img
+					alt="..."
+					height="300"
+					src="/images/{{ product.img }}"
+					id="images"/>
+
+				<button
+					type="button"
+					class="btn btn-success"
+					data-toggle="modal"
+					data-target="#details-1">
+					Placiau
+				</button>
+			</div>
+			<div
+				class="card-footer">
+				{# Check if price variable exists and is numeric value #}
+				{% if product.price and product.price matches '/^[-+]?[0-9]*\\.?[0-9]+$/' %}
+					{# Format price as two decimal points from floating point value (ex. 0.20, 0.40) #}
+					{% if product.discount and product.discount > 0 %}
+						<p class="price">
+							Kaina:
+							<s class="text-danger">{{ product.price|number_format(2) }}</s>
+							{{ (product.price - product.discount)|number_format(2) }}
+						</p>
+					{% else %}
+						<p class="price">Kaina:
+						{{ product.price|number_format(2) }}</p>
+					{% endif %}
+				{% endif %}
+			</div>
+		</div>
+	</div>
+{% endmacro %}
