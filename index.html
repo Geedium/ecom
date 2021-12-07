@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="js/bootstrap.min.js" defer></script>
+    <title>Diag shop</title>
+  </head>
+  <body>
+    <!------------Navigation-bar-------------->
+
+    <nav class="navbar navbar-default navbar-fixed-top" id="navbar">
+      <div class="container">
+        <a href="/ecom/index.php" class="navbar-brand" id="text">Diag shop</a>
+        <div class="nav navbar-nav">
+          <!---------Drop down menu---------------->
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="dropdown">
+              <button
+                class="btn btn-secondary dropdown-toggle"
+                type="button"
+                id="dropdownMenuButton"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                Kategorijos
+              </button>
+
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#"
+                  >Universali automobiliu programavmo iranga</a
+                >
+                <a class="dropdown-item" href="#"
+                  >Automobiliu iranga pagal marke</a
+                >
+                <a class="dropdown-item" href="#">ADAS kalibravimo iranga</a>
+                <a class="dropdown-item" href="#">Chip-tuning iranga</a>
+                <a class="dropdown-item" href="#"
+                  >Sunkiuju automobiliu iranga</a
+                >
+                <a class="dropdown-item" href="#"
+                  >Motociklu diagnostikos iranga</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="col-md-8">
+      <div class="row">
+        <h2 class="text-center">Featured Products</h2>
+        <div class="col-m3">
+          <h4>Autel Maxicheck</h4>
+          <img src=ïmages/autel_maxicheck.jpg alt="Autel maxichec" id="images"/>
+          <p class="list-price text-danger">Pradine kaina: <s>299.90</s></p>
+          <p class="price">Dabartine kaina: 249.99</p>
+          <button
+            type="button"
+            class="btn btn-success"
+            data-toggle="modal"
+            data-target="#details-1"
+          >
+            Placiau
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!---Footer---->
+    <footer class="bg-light text-center text-lg-start">
+      <!-- Copyright -->
+      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+        © 2020 Copyright:
+        <a class="text-dark">Auto diag</a>
+      </div>
+      <!-- Copyright -->
+    </footer>
+  </body>
+</html>
