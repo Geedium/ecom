@@ -17,11 +17,11 @@ CREATE TABLE IF NOT EXISTS `categories` (
 DELETE FROM `categories`;
 /*!40000 ALTER TABLE `categories` DISABLE KEYS */;
 INSERT INTO `categories` (`id`, `parent_id`, `title`) VALUES
-	(1, 0, 'Detalės'),
-	(2, 1, 'Apšvietimas'),
-	(3, 1, 'Aušinimas'),
-	(4, 0, 'Akumuliatoriai'),
-	(5, 4, 'Automobiliams');
+	(1, 0, 'Universali iranga'),
+	(2, 1, 'Chip tuning iranga'),
+	(3, 1, 'Launch diagnostika'),
+	(4, 0, 'Iranga pagal marke'),
+	(5, 4, 'Adas kalibravimo iranga');
 /*!40000 ALTER TABLE `categories` ENABLE KEYS */;
 
 CREATE TABLE IF NOT EXISTS `categories_products` (
@@ -54,12 +54,7 @@ CREATE TABLE IF NOT EXISTS `products` (
 DELETE FROM `products`;
 /*!40000 ALTER TABLE `products` DISABLE KEYS */;
 INSERT INTO `products` (`id`, `title`, `price`, `discount`, `img`) VALUES
-	(1, 'Opel diag irankis', 10.00, 2.00, 'autel_maxicheck.jpg'),
-	(2, 'Opel diag irankis2', 12.30, 0.00, 'autel_maxicheck.jpg'),
-	(3, 'Opel diag irankis3', 1.00, 0.00, 'autel_maxicheck.jpg'),
-	(4, 'Opel diag irankis4', 10.00, 0.00, 'autel_maxicheck.jpg'),
-	(5, 'Opel diag irankis6', 10.00, 0.00, 'autel_maxicheck.jpg'),
-	(6, 'Opel diag irankis5', 10.00, 0.00, 'autel_maxicheck.jpg');
+	
 /*!40000 ALTER TABLE `products` ENABLE KEYS */;
 
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;

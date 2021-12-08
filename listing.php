@@ -19,7 +19,7 @@ $twig = new \Twig\Environment($loader, [
 $pdo = new \PDO(
     "mysql:host=localhost;dbname=diag_shop", // dsn
     'root', // hostname
-    'admin' // password
+    '' // password
 );
 
 // get id from url query /?id=[number]
